@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Cloud, ShieldCheck, Zap, Menu, X, Lock, Eye, Globe, Server, Cpu, Key, Terminal, LayoutGrid } from "lucide-react";
-import zynLogo from "@assets/file_00000000570c7207af3c30941c82de96_1763899068789.png";
 
 // Zynexa Landing — Revised based on feedback
 // 1. Header is sticky/fixed
@@ -40,8 +39,8 @@ export default function ZynexaLanding() {
       >
         <nav className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-black border border-white/10 flex items-center justify-center group relative overflow-hidden">
-              <img src={zynLogo} alt="Zynexa Logo" className="w-full h-full object-contain p-1" />
+            <div className="w-10 h-10 rounded-md bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center group relative overflow-hidden">
+              <span className="font-bold text-white text-sm">Z</span>
             </div>
             <div className="hidden sm:block">
               <span className="font-bold tracking-tight text-white text-lg">Zynexa</span>
