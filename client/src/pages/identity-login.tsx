@@ -6,7 +6,6 @@ import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Textarea } from '../components/ui/textarea';
 import Header from '../components/Header';
-import zynLogo from "@assets/file_00000000570c7207af3c30941c82de96_1763899068789.png";
 
 export default function IdentityLogin() {
   const [, setLocation] = useLocation();
