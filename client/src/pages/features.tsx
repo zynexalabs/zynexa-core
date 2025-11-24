@@ -1,29 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import mermaid from "mermaid";
+import { useState } from "react";
 import Header from "@/components/Header";
 import { Shield, MessageSquare, HardDrive, Repeat, ChevronRight } from "lucide-react";
 
 export default function FeaturesPage() {
   const [activeFeature, setActiveFeature] = useState(0);
-  const mermaidRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    mermaid.initialize({ 
-      theme: 'dark',
-      themeVariables: {
-        primaryColor: '#00E0FF',
-        primaryTextColor: '#fff',
-        primaryBorderColor: '#00E0FF',
-        lineColor: '#8A2BE2',
-        secondaryColor: '#8A2BE2',
-        tertiaryColor: '#1a1a1a'
-      }
-    });
-    
-    mermaidRefs.current.forEach(ref => {
-      if (ref) mermaid.contentLoaded();
-    });
-  }, [activeFeature]);
 
   const features = [
     {
