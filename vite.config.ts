@@ -49,3 +49,5 @@ export default defineConfig({
     },
   },
 });
+
+// chore: setup build and dev configuration

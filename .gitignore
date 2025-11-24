@@ -34,3 +34,5 @@ github_bio.txt
 # IDEs
 .vscode/
 .idea/
+
+// chore: setup build and dev configuration
