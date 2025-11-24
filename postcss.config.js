@@ -4,3 +4,5 @@ export default {
     autoprefixer: {},
   },
 }
+
+// feat: add tailwind and ui framework dependencies
