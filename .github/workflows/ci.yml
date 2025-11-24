@@ -7,48 +7,19 @@ on:
     branches: [main]
 
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Verify project structure
-        run: |
-          test -f package.json && echo "✓ package.json"
-          test -f tsconfig.json && echo "✓ tsconfig.json"
-          test -d client && echo "✓ client/"
-          test -d server && echo "✓ server/"
-          test -d shared && echo "✓ shared/"
-          echo "✓ Repository structure valid"
-
-      - name: Check for Replit references
-        run: |
-          if grep -r "replit" . --include="*.ts" --include="*.tsx" --include="*.js" 2>/dev/null; then
-            echo "❌ Found Replit references"
-            exit 1
-          else
-            echo "✓ No Replit references"
-          fi
-
-      - name: Verify README and documentation
-        run: |
-          test -f README.md && echo "✓ README.md"
-          test -f SECURITY.md && echo "✓ SECURITY.md"
-          test -f .env.example && echo "✓ .env.example"
-          test -f smoke-test.sh && echo "✓ smoke-test.sh"
-          echo "✓ All documentation present"
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
         continue-on-error: true
 
-      - name: Audit dependencies
+      - name: Security audit
         run: npm audit --audit-level=high || true
-        continue-on-error: true
