@@ -158,3 +158,5 @@ export function getMnemonicFromLocalStorage(): string | null {
 export function clearMnemonicFromLocalStorage(): void {
   localStorage.removeItem('zk_mnemonic');
 }
+
+// feat: implement core cryptography utilities
