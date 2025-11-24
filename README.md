@@ -119,3 +119,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *Built with ❤️ by Zynexa Labs*
+
+// docs: update README with architecture and roadmap
