@@ -1,31 +1,26 @@
-name: CI — build & typecheck
+name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps --no-fund --no-audit
-      
-      - name: Verify build structure
-        run: ls -la client/src && ls -la server/src 2>/dev/null || true
-      
-      - name: Security audit
-        run: npm audit --audit-level=moderate || true
+        run: npm ci
+
+      - name: Run security audit
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
