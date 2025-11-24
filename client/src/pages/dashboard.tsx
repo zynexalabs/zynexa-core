@@ -203,3 +203,5 @@ function StatCard({ label, value, color }: StatCardProps) {
     </Card>
   );
 }
+
+// feat: implement dashboard and feature pages
