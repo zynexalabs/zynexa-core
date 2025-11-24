@@ -15,7 +15,7 @@
 | **App** | [app.zynexa.io](https://app.zynexa.io) |
 | **Documentation** | [docs.zynexa.io](https://docs.zynexa.io) |
 | **About** | [about.zynexa.io](https://about.zynexa.io) |
-| **X (Twitter)** | [x.com/zynexa](https://x.com/zynexa) |
+| **X (Twitter)** | [x.com/zynexaproject](https://x.com/zynexaproject) |
 
 ## 🏗 Architecture
 
