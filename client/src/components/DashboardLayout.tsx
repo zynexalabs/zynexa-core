@@ -9,7 +9,6 @@ import {
   User
 } from 'lucide-react';
 import Header from './Header';
-import zynLogo from "@assets/file_00000000570c7207af3c30941c82de96_1763899068789.png";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
