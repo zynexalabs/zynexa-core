@@ -17,7 +17,6 @@ import { Textarea } from '../components/ui/textarea';
 import { Checkbox } from '../components/ui/checkbox';
 import { Copy, Check, Shield, Lock } from 'lucide-react';
 import Header from '../components/Header';
-import zynLogo from "@assets/file_00000000570c7207af3c30941c82de96_1763899068789.png";
 
 export default function IdentityPage() {
   const [, setLocation] = useLocation();
@@ -429,5 +428,3 @@ export default function IdentityPage() {
     </div>
   );
 }
-
-// feat: create identity management pages
